@@ -1,8 +1,8 @@
 const priceForKilometer = 0.21;
-let nameOfPassenger = document.getElementById('name');
-let numberOfKilometres = document.getElementById('km');
-let ageOfPassenger = document.getElementById('select');
-let submit = document.getElementById('generate');
+const nameOfPassenger = document.getElementById('name');
+const numberOfKilometres = document.getElementById('km');
+const ageOfPassenger = document.getElementById('select');
+const submit = document.getElementById('generate');
 
 submit.addEventListener('click', function () {
     const passengerName = nameOfPassenger.value;
@@ -26,7 +26,7 @@ submit.addEventListener('click', function () {
     const card = document.getElementById('card_container');
     card.innerHTML =
         `<h4 class="mb-0 text-uppercase fw-bold text-center text-white">Il tuo biglietto</h4>
-    <div class="card mt-3">
+    <div class="card mt-3 rounded-0">
     <div class="card-header d-flex align-items-center">
     <h5 class="mb-0 ps-1 text-uppercase">Dettaglio passeggeri</h5>
     </div>
@@ -44,7 +44,7 @@ submit.addEventListener('click', function () {
             <tbody>
                 <tr>
                     <th scope="row" class="fw-bold">${passengerName}</th>
-                    <td>Biglietto standard</td>
+                    <td> Biglietto Standard</td>
                     <td class="collapse d-md-table-cell">${carrozzaAssegnata}</td>
                     <td class="collapse d-md-table-cell">${cpCode}</td>
                     <td>€ ${price.toFixed(2)}</td>
