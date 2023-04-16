@@ -5,6 +5,7 @@ const numberOfKilometres = document.getElementById(`km`);
 const ageOfPassenger = document.getElementById(`select`);
 const submit = document.getElementById(`generate`);
 
+
 //Assegno un eventListener
 submit.addEventListener(`click`, function () {
     const passengerName = nameOfPassenger.value;
@@ -12,6 +13,7 @@ submit.addEventListener(`click`, function () {
     let passengerAge = ageOfPassenger.value;
     let price = numKm * priceForKilometer;
     let ticketOffer = `Biglietto Standard`;
+
 
     //Dichiaro un primo if per calcolare lo sconto
     if (passengerAge === `under_18`) {
@@ -35,8 +37,6 @@ submit.addEventListener(`click`, function () {
 
     } else {
         let carriage = Math.ceil(Math.random() * 12);
-        console.log(`carrozza`, carriage);
-
         let cpCode = Math.floor(Math.random() * 100000) + 1;
         const card = document.getElementById(`card_container`);
         card.innerHTML =
@@ -79,6 +79,9 @@ const reset = document.getElementById(`reset`);
 reset.addEventListener(`click`, function () {
     nameOfPassenger.value = ``;
     numberOfKilometres.value = ``;
+    const card = document.getElementById(`card_container`);
+    card.innerHTML =``;
+
 })
 
 
