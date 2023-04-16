@@ -25,8 +25,8 @@ submit.addEventListener(`click`, function () {
     }
 
     //Dichiaro un secondo if per aprire gli alert: se i dati sono stati inseriti correttamente si apre una card tramite .innerHTML
-    if (nameOfPassenger.value === ``) {
-        alert(`Nessun nome inserito!`);
+    if (nameOfPassenger.value === `` || numberOfKilometres.value === ``) {
+        alert(`Dato non inserito!`);
 
     } else if (numberOfKilometres.value < 0) {
         alert(`Il valore inserito deve essere maggiore di 0!`);
