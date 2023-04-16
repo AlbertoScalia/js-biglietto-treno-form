@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-12 col-md-4 py-2 py-md-4 px-4">
                     <label for="inputKilometres" class="form-label fw-semibold text-danger">Km da percorrere</label>
-                    <input type="text" class="form-control" id="km" name="inputName">
+                    <input type="number" class="form-control" id="km" aria-label="Sizing example input">
                 </div>
                 <div class="col-12 col-md-4 py-2 py-md-4 px-4">
                     <label for="inputKilometres" class="form-label fw-semibold text-danger">Fascia d'età</label>
@@ -33,9 +33,11 @@
                         <option value="over_65">Over 65</option>
                     </select>
                 </div>
-                <div class=" my-3">
-                    <button type="submit" class="btn btn-danger" id="generate">Genera</button>
-                    <button type="reset" class="btn btn-danger" id="reset">Annulla</button>
+                <div class="row py-4 justify-content-center">
+                    <div class="col text-center">
+                        <button id="generate" type="button" class="btn btn-success">Genera</button>
+                        <button id="reset" type="button" class="btn btn-danger">Annulla</button>
+                    </div>
                 </div>
             </div>
         </div>
