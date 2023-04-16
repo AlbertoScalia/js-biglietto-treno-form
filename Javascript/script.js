@@ -11,18 +11,20 @@ submit.addEventListener(`click`, function () {
     const numKm = numberOfKilometres.value;
     let passengerAge = ageOfPassenger.value;
     let price = numKm * priceForKilometer;
+    let ticketOffer = `Biglietto Standard`;
 
     //Dichiaro un primo if per calcolare lo sconto
     if (passengerAge === `under_18`) {
         const discount20 = price * 20 / 100;
         price -= discount20;
-        offer = `Biglietto Standard`;
+        ticketOffer = `Biglietto Under 18`;
 
     } else if (passengerAge === `over_65`) {
         const discount40 = price * 40 / 100;
         price -= discount40;
-        offer = `Biglietto Over 65`;
+        ticketOffer = `Biglietto Over 65`;
     }
+    
 
     //Dichiaro un secondo if per aprire gli alert: se i dati sono stati inseriti correttamente si apre una card tramite .innerHTML
     if (nameOfPassenger.value === `` || numberOfKilometres.value === ``) {
@@ -57,7 +59,7 @@ submit.addEventListener(`click`, function () {
                 <tbody>
                     <tr>
                         <th scope="row" class="fw-bold">${passengerName}</th>
-                        <td>${offer}</td>
+                        <td>${ticketOffer}</td>
                         <td class="collapse d-md-table-cell">${carriage}</td>
                         <td class="collapse d-md-table-cell">${cpCode}</td>
                         <td>€ ${price.toFixed(2)}</td>
